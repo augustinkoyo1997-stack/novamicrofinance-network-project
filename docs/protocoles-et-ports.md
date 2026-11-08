@@ -31,5 +31,5 @@ Ce document liste les ports que le réseau doit autoriser. Il servira de base au
 
 Ports observés en mode Simulation (à compléter avec vos propres observations) :
 
-- Port source : (aléatoire, à noter)
+- Port source : 1028 (éphémère, choisi par le PC)
 - Port destination : 80 (HTTP)
