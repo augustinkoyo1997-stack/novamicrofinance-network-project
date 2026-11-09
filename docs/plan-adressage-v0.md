@@ -68,3 +68,10 @@ Le tableau provisoire plus haut (un /24 par VLAN) est simple et lisible, mais ga
 | MANAGEMENT | 12 | 10.1.0.224/28 | 10.1.0.225 à 10.1.0.238 | 10.1.0.239 |
 
 Remarque : le bloc 10.1.0.176 - 10.1.0.191 reste inutilisé (alignement du /27 sur un multiple de 32). Espace libre restant : 10.1.0.240 - 10.1.0.255.
+
+### Compléments
+
+| Réseau | Besoin | Adresse/masque | Hôtes utilisables | Broadcast |
+|---|---|---|---|---|
+| IMPRIMANTES | 6 | 10.1.0.240/29 | 10.1.0.241 à 10.1.0.246 | 10.1.0.247 |
+| SECURITE-CAMERAS | 25 | 10.1.1.0/27 | 10.1.1.1 à 10.1.1.30 | 10.1.1.31 |
