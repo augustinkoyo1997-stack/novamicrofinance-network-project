@@ -44,3 +44,18 @@ Plage retenue : 10.0.0.0/8 (beaucoup de place pour l'évolution et les futures a
 ### Justification
 - /25 par agence : 126 hôtes pour 60 employés, soit une marge de croissance confortable (imprimantes, Wi-Fi, nouveaux postes).
 - /30 pour les liens WAN : 2 adresses suffisent (un routeur à chaque extrémité), aucun gaspillage.
+
+## Découpage VLSM du siège (10.1.0.0/16)
+
+Méthode : classement du plus grand au plus petit besoin, plus petit masque suffisant (2^n - 2 >= besoin), chaque bloc commence au broadcast précédent + 1.
+
+| Réseau | Besoin | Bits hôtes | Adresse/masque | Hôtes utilisables | Broadcast |
+|---|---|---|---|---|---|
+| USERS | 80 | 7 (126 hôtes) | 10.1.0.0/25 | 10.1.0.1 à 10.1.0.126 | 10.1.0.127 |
+| SERVEURS | 20 | 5 (30 hôtes) | 10.1.0.128/27 | 10.1.0.129 à 10.1.0.158 | 10.1.0.159 |
+| ADMIN | 10 | 4 (14 hôtes) | 10.1.0.160/28 | 10.1.0.161 à 10.1.0.174 | 10.1.0.175 |
+
+Espace restant : à partir de 10.1.0.176, réservé aux futurs besoins (WIFI-INVITES, MANAGEMENT).
+
+### Remarque de conception
+Le tableau provisoire plus haut (un /24 par VLAN) est simple et lisible, mais gaspille des adresses. Le découpage VLSM est plus économe. Le choix définitif sera arrêté dans la version v1 du plan, après l'atelier de synthèse.
