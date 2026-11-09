@@ -1,0 +1,28 @@
+vlan 10
+ name USERS
+vlan 30
+ name ADMIN
+vlan 40
+ name WIFI-INVITES
+vlan 99
+ name MANAGEMENT
+!
+interface fastEthernet 0/1
+ description PC-USER
+ switchport mode access
+ switchport access vlan 10
+!
+interface fastEthernet 0/2
+ description PC-ADMIN
+ switchport mode access
+ switchport access vlan 30
+!
+interface fastEthernet 0/3
+ description PC-INVITE
+ switchport mode access
+ switchport access vlan 40
+!
+interface fastEthernet 0/5
+ description PC-TEST-VLAN
+ switchport mode access
+ switchport access vlan 30
