@@ -1,5 +1,4 @@
-(SW-ACC-01#show vlan brief
-
+SW-ACC-01#show vlan brief
 VLAN Name                             Status    Ports
 ---- -------------------------------- --------- -------------------------------
 1    default                          active    Fa0/6, Fa0/7, Fa0/8, Fa0/9
@@ -8,12 +7,13 @@ VLAN Name                             Status    Ports
                                                 Fa0/18, Fa0/19, Fa0/20, Fa0/21
                                                 Fa0/22, Fa0/23, Fa0/24, Gig0/1
                                                 Gig0/2
-10   USER                             active    Fa0/1
+10   USERS                            active    Fa0/1
 30   ADMIN                            active    Fa0/2, Fa0/5
-40   WIFI-INVITE                      active    Fa0/3
+40   WIFI-INVITES                     active    Fa0/3
 99   MANAGEMENT                       active    
 1002 fddi-default                     active    
 1003 token-ring-default               active    
 1004 fddinet-default                  active    
 1005 trnet-default                    active    
-SW-ACC-01#)
+SW-ACC-01#
+SW-ACC-01#
