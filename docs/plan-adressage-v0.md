@@ -59,3 +59,12 @@ Espace restant : à partir de 10.1.0.176, réservé aux futurs besoins (WIFI-INV
 
 ### Remarque de conception
 Le tableau provisoire plus haut (un /24 par VLAN) est simple et lisible, mais gaspille des adresses. Le découpage VLSM est plus économe. Le choix définitif sera arrêté dans la version v1 du plan, après l'atelier de synthèse.
+
+### Suite du VLSM du siège
+
+| Réseau | Besoin | Adresse/masque | Hôtes utilisables | Broadcast |
+|---|---|---|---|---|
+| WIFI-INVITES | 30 | 10.1.0.192/27 | 10.1.0.193 à 10.1.0.222 | 10.1.0.223 |
+| MANAGEMENT | 12 | 10.1.0.224/28 | 10.1.0.225 à 10.1.0.238 | 10.1.0.239 |
+
+Remarque : le bloc 10.1.0.176 - 10.1.0.191 reste inutilisé (alignement du /27 sur un multiple de 32). Espace libre restant : 10.1.0.240 - 10.1.0.255.
